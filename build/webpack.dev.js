@@ -10,10 +10,5 @@ module.exports = {
     port: 8421,
     hot: true,
     historyApiFallback: true,
-    // historyApiFallback: {
-    //   rewrites: [
-    //     { from: /./, to: resolve(__dirname, '../dist/index.html') }
-    //   ]
-    // },
   }
 }

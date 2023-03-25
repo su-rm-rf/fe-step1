@@ -15,27 +15,33 @@ module.exports = {
       {
         test: /.tsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-            plugins: ['@babel/plugin-transform-runtime']
+        use: [
+          {
+            loader: 'thread-loader'
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+              plugins: ['@babel/plugin-transform-runtime'],
+              cacheDirectory: true
+            }
           }
-        }
+        ]
       },
       {
         test: /.s?css$/,
         use: [
           'style-loader',
           'css-loader',
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {
-          //     postcssOptions: {
-          //       plugins: ['postcss-preset-env']
-          //     }
-          //   }
-          // },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['postcss-preset-env']
+              }
+            }
+          },
           'less-loader',
           'sass-loader',
         ]

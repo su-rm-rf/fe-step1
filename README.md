@@ -1,3 +1,8 @@
+# 需求
+```
+开发一个单机网页版的TodoList任务管理工具
+```
+
 # 技术栈
 ```
 编辑器：VSCode
@@ -26,29 +31,28 @@ src
   router
   store
   style
+  utils
 test
-```
-
-# 需求
-```
-开发一个单机版网页TodoList任务管理工具
 ```
 
 # 技术拆解
 ```
 使用localStorage进行本地存储管理
 <!-- 做一个简易的Node.js服务端 -->
+响应式布局
 ```
 
 # 依赖项
 ```
-webpack webpack-cli webpack-dev-server webpack-merge
+webpack webpack-cli webpack-dev-server
 html-webpack-plugin
 style-loader css-loader sass sass-loader less less-loader postcss postcss-loader postcss-preset-env
-typescript ts-loader
-react react-dom react-router react-router-dom redux react-redux redux-thunk redux-log
-@babel/core babel-loader @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime
+typescript
+react react-dom react-router react-router-dom redux react-redux redux-thunk redux-logger
+thread-loader
+@babel/core babel-loader @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime @babel/preset-typescript
 ant-design
+axios
 jest
 @types/react @types/react-dom
 cross-env nodemon ts-node
@@ -56,20 +60,23 @@ cross-env nodemon ts-node
 
 # TypeScript配置
 ```
-"target": "ES5",
-"jsx": "react-jsx",
-"module": "ESNext",
-"baseUrl": "./",
-"paths": {
-  "@/*": [
-    "src"
-  ]
-},
-"strict": true,
-"allowSyntheticDefaultImports": true,
-"esModuleInterop": true,
-"skipLibCheck": true,
-"forceConsistentCasingInFileNames": true
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  }
+}
 ```
 
 # 常见错误
@@ -86,3 +93,5 @@ A: 使用.tsx格式，而非.ts格式
 cacheDirectory 把转译结果缓存到文件系统中
 @babel/plugin-transform-runtime 避免重复引入babel-runtime
 ```
+
+[GitHub地址](https://github.com/su-rm-rf/fe-step1)

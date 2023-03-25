@@ -1,17 +1,18 @@
 import { createStore, applyMiddleware } from "redux"
 import thunk from 'redux-thunk'
-import log from 'redux-log'
-import saga from 'redux-saga'
+import logger from 'redux-logger'
+// import saga from 'redux-saga'
 
 import { todo_add } from '@/actions'
 import reducer from "@/reducers"
 
 const store = createStore(reducer, 
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 )
 
 store.subscribe(() => console.log(store.getState()))
 
-// store.dispatch(todo_add(123))
+// const rs = store.dispatch(todo_add(123))
+// console.log(rs)
 
 export default store
