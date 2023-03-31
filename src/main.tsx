@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 
 import store from '@/store'
 import router from '@/router'
-import '@/style'
+import '@/styles'
 
 createRoot(document.querySelector('#root') as HTMLElement)
 .render(

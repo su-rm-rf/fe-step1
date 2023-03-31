@@ -3,6 +3,8 @@ import { createBrowserRouter, RouteObject } from 'react-router-dom'
 
 import App from '@/App'
 import Dashboard from '@/components/Dashboard'
+import OfflineTodo from '@/components/offline-todo'
+import OldTodo from '@/components/old-todo'
 import Todo from '@/components/todo'
 import About from '@/components/About'
 
@@ -17,16 +19,24 @@ const routes: RouteObject[] = [
       },
       {
         path: 'offline-todo',
-        element: <Todo />
+        element: <OfflineTodo />
       },
       {
-        path: 'online-todo',
+        path: 'old-todo',
+        element: <OldTodo />
+      },
+      {
+        path: 'todo',
         element: <Todo />
       },
       {
         path: 'about',
         element: <About />
       },
+      {
+        path: '*',
+        element: <div>404</div>
+      }
     ]
   }
 ]

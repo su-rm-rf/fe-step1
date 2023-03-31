@@ -3,8 +3,8 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 // import saga from 'redux-saga'
 
-import { todo_add } from '@/actions'
-import reducer from "@/reducers"
+import { todo_add } from '@/store/actions/offline-todo'
+import reducer from "@/store/reducers"
 
 const store = createStore(reducer, 
   applyMiddleware(thunk, logger)

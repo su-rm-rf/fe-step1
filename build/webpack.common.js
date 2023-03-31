@@ -1,6 +1,7 @@
 const { resolve, join } = require('path')
 const pkage = require('../package.json')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/main.tsx',
@@ -32,7 +33,8 @@ module.exports = {
       {
         test: /.s?css$/,
         use: [
-          'style-loader',
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -58,6 +60,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '../public/index.html'),
       title: pkage.name
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'static/css/[name].[chunkhash:8].css'
     })
   ]
 }

@@ -2,7 +2,7 @@ import { test, expect } from '@jest/globals'
 
 import store from '@/store'
 import constants from '@/constants'
-import { todo_add } from '@/actions'
+import { todo_add } from '@/store/actions/offline-todo'
 
 test('1+1=2', () => {
   expect(store.dispatch(todo_add(123))).toBe({

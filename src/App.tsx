@@ -1,19 +1,16 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-
-interface A {
-  name: String
-}
+import { NavLink, Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
     <div className="app">
-      <div className="nav-header">
-        <Link to="/">Home</Link>
-        <Link to="/offline-todo">Offline</Link>
-        <Link to="/online-todo">Online</Link>
-        <Link to="/about">About</Link>
-      </div>
+      <nav className="nav-header">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/offline-todo">Offline</NavLink>
+        <NavLink to="/old-todo">OldTodo</NavLink>
+        <NavLink to="/todo">Todo</NavLink>
+        <NavLink to="/about">About</NavLink>
+      </nav>
       <div className="content-body">
         <Outlet />
       </div>

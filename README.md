@@ -9,17 +9,18 @@
 
 # 技术栈
 ```
-编辑器：VSCode
-源码管理：Git
-包管理器：Pnpm
-编译构建：Babel、Webpack
-语言：TypeScript
-框架：React
-路由：React-Router
-状态管理：Redux
-CSS处理器：Sass、Less、PostCSS
-UI框架：AntDesign
-单元测试：Jest
+前端：
+  编辑器：VSCode
+  源码管理：Git
+  包管理器：Pnpm
+  编译构建：Babel、Webpack
+  语言：TypeScript
+  框架：React
+  路由：React-Router
+  状态管理：Redux
+  CSS处理器：Sass、Less、PostCSS
+  UI框架：AntDesign
+  单元测试：Jest
 ```
 
 # 组织结构
@@ -27,23 +28,27 @@ UI框架：AntDesign
 build                       --- 构建脚本
 public                      --- 公共资源
 src
-  actions                   --- action creators
   components                --- UI组件
   containers                --- 容器组件
   constants                 --- 常量
-  reducers                  --- reducer
   router                    --- 路由
-  store                     --- store
-  style                     --- 样式
+  store                     
+    actions                 --- action creators
+    reducers                --- reducer
+  styles                    --- 样式
   utils                     --- 工具
+  App.tsx
+  main.tsx
 test                        --- 测试
 ```
+
+> component, container, store/action, store/reducer 都按照业务功能模块划分
 
 # 技术拆解
 ```
 响应式布局
 使用localStorage实现本地任务管理
-<!-- 做一个Node.js服务端 -->
+使用Node.js服务端实现本地任务管理
 ```
 
 # TypeScript配置
@@ -69,16 +74,24 @@ test                        --- 测试
 
 # 依赖项
 ```
-webpack webpack-cli webpack-dev-server
-html-webpack-plugin
-style-loader css-loader sass sass-loader less less-loader postcss postcss-loader postcss-preset-env
+webpack打包构建
+  webpack webpack-cli webpack-dev-server webpack-merge
+html
+  html-webpack-plugin
+css
+  style-loader css-loader sass sass-loader less less-loader postcss postcss-loader postcss-preset-env mini-css-extract-plugin
 typescript
-react react-dom react-router react-router-dom redux react-redux redux-thunk redux-logger
+react
+  react react-dom react-router react-router-dom redux react-redux redux-thunk redux-logger
 thread-loader
-@babel/core babel-loader @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime @babel/preset-typescript
-ant-design
+babel
+  @babel/core babel-loader @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime @babel/preset-typescript
 axios
-jest
+UI
+  ant-design echarts
+test
+  jest
+eslint
 @types/react @types/react-dom
 cross-env nodemon ts-node
 ```

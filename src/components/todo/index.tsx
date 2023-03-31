@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react"
 
-import Add from '@/containers/Add'
-import Filter from '@/containers/Filter'
-import List from '@/containers/List'
+// import Add from '@/containers/todo/Add'
+// import Filter from '@/containers/todo/Filter'
+// import List from '@/containers/todo/List'
 
 const Todo = () => {
   return (
     <div className="todo-app">
-      <Add />
+      {/* <Add />
       <Filter />
-      <List />
+      <List /> */}
     </div>
   )
 }

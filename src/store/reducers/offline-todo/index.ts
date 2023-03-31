@@ -1,11 +1,9 @@
 import constants from "@/constants"
 import utils from "@/utils"
 
-const todo = (state=[], action) => {
+const offline_todo = (state=[], action) => {
   let newState = []
   switch (action.type) {
-    // case constants.TODO_GET_SUCCESS:
-    //   return action.res.data
     case constants.TODO_GET:
       return utils.getTodoList()
     case constants.TODO_CLEAR:
@@ -41,4 +39,4 @@ const todo = (state=[], action) => {
   }
 }
 
-export default todo
+export default offline_todo

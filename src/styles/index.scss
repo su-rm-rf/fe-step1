@@ -1,5 +1,4 @@
 @import url('./reset.scss');
-@import url('./todo.scss');
 
 body {
   // font-size: 16px;
@@ -15,8 +14,13 @@ body {
     a {
       flex: 1;
       text-decoration: none;
+      &.active {
+        color: #f00;
+      }
     }
   }
   .content-body {
   }
 }
+
+@import url('./todo.scss');
