@@ -26,6 +26,7 @@
 # 组织结构
 ```
 build                       --- 构建脚本
+dist                        --- 打包生成
 public                      --- 公共资源
 src
   components                --- UI组件
@@ -48,7 +49,7 @@ test                        --- 测试
 ```
 响应式布局
 使用localStorage实现本地任务管理
-使用Node.js服务端实现本地任务管理
+使用Nodejs服务端实现本地任务管理
 ```
 
 # TypeScript配置
