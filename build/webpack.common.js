@@ -3,6 +3,8 @@ const pkage = require('../package.json')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const isDev = process.env.NODE_ENV === 'development' 
+
 module.exports = {
   entry: './src/main.tsx',
   output: {
@@ -33,8 +35,7 @@ module.exports = {
       {
         test: /.s?css$/,
         use: [
-          // 'style-loader',
-          MiniCssExtractPlugin.loader,
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
