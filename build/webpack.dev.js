@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
-    port: 8421,
+    port: 8121,
     hot: true,
     historyApiFallback: true,
   }

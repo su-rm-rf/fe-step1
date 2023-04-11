@@ -9,7 +9,7 @@
 
 > 前端运行: npm run dev <br/>
 > 后端运行: npm run server <br/><br/>
-> 访问: http://localhost:8421/todo
+> 访问: http://localhost:8121/todo
 
 # 技术栈
 ```

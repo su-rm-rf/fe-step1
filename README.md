@@ -28,7 +28,7 @@
 > [项目GitHub地址](https://github.com/su-rm-rf/fe-step1)
 
 > 运行: npm run dev <br/><br/>
-> 访问: http://localhost:8421/offline-todo
+> 访问: http://localhost:8121/offline-todo
 
 # 技术栈
 ```
