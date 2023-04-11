@@ -1,12 +1,12 @@
 .todo-app {
-  width: 80vw;
+  width: 90vw;
   margin: .4rem auto;
   .todo-add {
     display: flex;
     align-items: center;
     textarea {
       flex: 4;
-      min-height: 1rem;
+      min-height: 2rem;
       padding: .1rem;
       margin-right: .4rem;
     }
@@ -40,6 +40,9 @@
       &.completed {
         text-decoration: line-through;
       }
+    }
+    > button {
+      margin-top: 3vh;
     }
   }
 }
