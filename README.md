@@ -1,10 +1,36 @@
+[React全家桶 + TS - 全栈实战（一）](https://juejin.cn/post/7214472421113872442)
+
+[React全家桶 + TS + Koa Server + MySQL - 全栈实战（二）](https://juejin.cn/post/7215213377094287416)
+
+[Vue3全家桶 + TS + Koa Server + MySQL - 全栈实战（三）](https://juejin.cn/post/7216635223533535291)
+
+[React SSR + TS + Koa Server + MySQL - 全栈实战（四）](https://juejin.cn/post/7218564871831339064)
+
+[Vue3 SSR + TS + Koa Server + MongoDB - 全栈实战（五）]()
+
+[React SSR + TS + Java SSM + MySQL - 全栈实战（六）]()
+
+[React SSR + BFF + TS + Golang + MySQL - 全栈实战（七）]()
+
+[React SSR + TS + Java SpringBoot + MySQL - 全栈实战（八）]()
+
+[React SSR + BFF + TS + Python + MongoDB - 全栈实战（九）]()
+
+[Vue3 SSR + BFF + TS + Python + MongoDB - 全栈实战（十）]()
+
+
+
 > 纯手工从0到1编码，没有使用脚手架 <br/>
 > 
 > [GitHub地址](https://github.com/su-rm-rf/fe-step1)
 
+> 运行: <br/>
+> npm run dev <br/>
+> npm run server <br/>
+
 # 需求
 ```
-开发一个TodoList任务管理工具
+开发一个在线文档任务管理工具
 ```
 
 # 技术栈
@@ -41,6 +67,9 @@ src
   App.tsx
   main.tsx
 test                        --- 测试
+.eslintrc
+package.json
+tsconfig.json
 ```
 
 > component, container, store/action, store/reducer 都按照业务功能模块划分
@@ -49,7 +78,6 @@ test                        --- 测试
 ```
 响应式布局
 使用localStorage实现本地任务管理
-使用Nodejs服务端实现本地任务管理
 ```
 
 # TypeScript配置

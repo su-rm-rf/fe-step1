@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouteObject } from 'react-router-dom'
 
-import App from '@/App'
-import Dashboard from '@/components/Dashboard'
-import OfflineTodo from '@/components/offline-todo'
-import OldTodo from '@/components/old-todo'
-import Todo from '@/components/todo'
-import About from '@/components/About'
+// import App from '@/App'
+// import Dashboard from '@/components/Dashboard'
+// import OfflineTodo from '@/components/offline-todo'
+// import OldTodo from '@/components/old-todo'
+// import About from '@/components/About'
+
+const App = lazy(() => import('@/App'))
+const Dashboard = lazy(() => import('@/components/Dashboard'))
+const OfflineTodo = lazy(() => import('@/components/offline-todo'))
+const OldTodo = lazy(() => import('@/components/old-todo'))
+const About = lazy(() => import('@/components/About'))
 
 const routes: RouteObject[] = [
   {
@@ -15,23 +20,19 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Dashboard />
+        element: <Suspense><Dashboard /></Suspense>
       },
       {
         path: 'offline-todo',
-        element: <OfflineTodo />
-      },
-      {
-        path: 'old-todo',
-        element: <OldTodo />
+        element: <Suspense><OfflineTodo /></Suspense>
       },
       {
         path: 'todo',
-        element: <Todo />
+        element: <Suspense><OldTodo /></Suspense>
       },
       {
         path: 'about',
-        element: <About />
+        element: <Suspense><About /></Suspense>
       },
       {
         path: '*',

@@ -6,8 +6,7 @@ const App = () => {
     <div className="app">
       <nav className="nav-header">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/offline-todo">Offline</NavLink>
-        <NavLink to="/old-todo">OldTodo</NavLink>
+        <NavLink to="/offline-todo">单机版Todo</NavLink>
         <NavLink to="/todo">Todo</NavLink>
         <NavLink to="/about">About</NavLink>
       </nav>
